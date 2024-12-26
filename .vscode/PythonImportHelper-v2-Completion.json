@@ -1,0 +1,120 @@
+[
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "MySQLConnection",
+        "importPath": "mysql_connection",
+        "description": "mysql_connection",
+        "isExtraImport": true,
+        "detail": "mysql_connection",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "Task",
+        "kind": 6,
+        "importPath": "app.models.task_model",
+        "description": "app.models.task_model",
+        "peekOfCode": "class Task:\n    def __init__(self, \n                 tenantName: str, \n                 reference: str, \n                 documentCreator: str, \n                 dateCreated: datetime, \n                 info: str, \n                 tags: List[str], \n                 downloadKey: str, \n                 fields: Dict[str, any]",
+        "detail": "app.models.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "routes_flokzu",
+        "kind": 2,
+        "importPath": "app.routes.flokzu",
+        "description": "app.routes.flokzu",
+        "peekOfCode": "def routes_flokzu(app):\n    @app.route(\"/\", methods=[\"POST\"])\n    def webhook():\n        print(f\"Petición recibida: {request.method} {request.path} {request.data}\")\n        return jsonify({\"message\": \"¡Bienvenido a mi API!\"})",
+        "detail": "app.routes.flokzu",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.utils.mysql_connection",
+        "description": "app.utils.mysql_connection",
+        "peekOfCode": "db = MySQLConnection(\n    host=\"localhost\",\n    user=\"root\",\n    password=\"root\"\n)",
+        "detail": "app.utils.mysql_connection",
+        "documentation": {}
+    },
+    {
+        "label": "format_response",
+        "kind": 2,
+        "importPath": "app.utils",
+        "description": "app.utils",
+        "peekOfCode": "def format_response(data, message=\"Success\"):\n    return {\"data\": data, \"message\": message}",
+        "detail": "app.utils",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = create_app()\nif __name__ == \"__main__\":\n    app = create_app()\n    app.run(host=\"0.0.0.0\", port=5000)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class Config:\n    SECRET_KEY = \"mi_clave_secreta\"\n    DEBUG = True",
+        "detail": "config",
+        "documentation": {}
+    }
+]

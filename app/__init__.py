@@ -3,17 +3,19 @@ from flask import Flask, request
 def create_app():
     app = Flask(__name__)
 
-    # Configuración de la aplicación
     app.config.from_object("config.Config")
 
-    # Middleware para registrar cada solicitud
+    @app.after_request
+    def log_arquest():
+        print(f"La petición es: {request.method} {request.path} {request.data} {request.args}")
+        
     @app.before_request
-    def log_request():
+    def log_brequest():
         print(f"Entró una petición: {request.method} {request.path}")
+        
 
-    # Registrar las rutas
     with app.app_context():
-        from .routes import register_routes
-        register_routes(app)
+        from .routes.flokzu import routes_flokzu
+        routes_flokzu(app)
 
     return app

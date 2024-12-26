@@ -1,0 +1,13 @@
+{
+    "tenantName": "nombre del tenant",
+    "reference": "referencia del doc",
+    "documentCreator": "creador del doc",
+    "dateCreated": "fecha creacion del documento",
+    "info": " resumen del documento",
+    "tags": ["tags del documento separados por coma"],
+    "downloadKey": "id documento",
+    "fields": [
+                       {"campo 1": "valor 1"},
+                       {"campo 2": "valor 2"}	
+     ]
+}
